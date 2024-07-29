@@ -48,9 +48,9 @@ public:
 	void addExitItem(String text = "..");
 
 	/* Displays a custom soft key. Argument "slot" determines which of the three buttons the soft key should be displayed (BtnASlot, BtnDSlot or BtnCSlot). */
-	void displaySoftKey(SoftKeySlot slot, String text);
+	void displaySoftKey(SoftKeySlot slot, String text, bool start = true, bool end = true);
 	
-	/* Check if the softkey at this slot was just released. Argument "slot" determines which of the three buttons the soft key should be displayed (BtnASlot, BtnDSlot or BtnCSlot).*/
+	/* Check if the softkey at this slot was just released. Argument "slot" determines which of the three buttons the soft key should be displayed (BtnASlot, BtnBSlot or BtnCSlot).*/
 	bool wasSoftKeyReleased(SoftKeySlot slot);
 
 	/* Return a reference to the layout object, where you can tweak various display options */

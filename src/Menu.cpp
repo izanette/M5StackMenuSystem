@@ -113,12 +113,18 @@ Layout& Menu::getLayout()
 	return layout;
 }
 
-void Menu::displaySoftKey(SoftKeySlot slot, String text)
+void Menu::displaySoftKey(SoftKeySlot slot, String text, bool start /*= true*/, bool end /*= true*/)
 {
 	TextSoftKey softKey(slot, layout, control, text);
-	Display::getInstance()->drawStart();
+	if (start)
+	{
+		Display::getInstance()->drawStart();
+	}
 	softKey.render();
-	Display::getInstance()->drawEnd();
+	if (end)
+	{
+		Display::getInstance()->drawEnd();
+	}
 }
 
 bool Menu::wasSoftKeyReleased(SoftKeySlot slot)
