@@ -210,11 +210,11 @@ int MenuCenterSection::getCenterSectionHeight()
 
 int MenuCenterSection::getMenuItemsStartY()
 {
-	int centerSectionHeight = getCenterSectionHeight();
-	int maxItemsInViewport = getMaxMenuItemsInViewport();
-	int menuItemHeight = getMenuItemHeight();
-	int remainingPixels = centerSectionHeight - (maxItemsInViewport * menuItemHeight);
-	return menu->menuTopSection.getHeight() + (remainingPixels / 2);
+	//int centerSectionHeight = getCenterSectionHeight();
+	//int maxItemsInViewport = getMaxMenuItemsInViewport();
+	//int menuItemHeight = getMenuItemHeight();
+	//int remainingPixels = centerSectionHeight - (maxItemsInViewport * menuItemHeight);
+	return menu->menuTopSection.getHeight();// + (remainingPixels / 2);
 }
 
 int MenuCenterSection::getMenuItemsEndY()
